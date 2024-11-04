@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="client/resources/css/home.css?some_var_to_bust_cache=24312345">
+</head>
+<body style="background-color: #ffe7be">
+    <form id="post_form" class="post" >
+        <img id="avatar_img_input" class="avatar_img" src="client/resources/img/add.png" alt="avatar" >
+        <input type='text' id="username_input" class="username" placeholder="Username" />
+        <textarea id="main_text_input" ></textarea>
+        <img id="blog_img_input" class="blog_img" />
+        <div style="display: flex;justify-content: center">
+            <input id="blog_img_btn" type="file" accept="image/png">
+            <button id="remove_btn" type="button"></button>
+        </div>
+
+        <button id="submit_btn" >Submit</button>
+
+    </form>
+    <div id="post_feed">
+
+    </div>
+</body>
+<script src="client/resources/js/image_input.js?some_var_to_bust_cache=24312345"></script>
+<script src="client/resources/js/avatar_input.js?some_var_to_bust_cache=24312345"></script>
+<script src="client/resources/js/form_submit.js?some_var_to_bust_cache=24312345"></script>
+<script src="client/resources/js/load_posts.js?some_var_to_bust_cache=24312345"></script>
+
+
+</html>

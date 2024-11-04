@@ -1,0 +1,17 @@
+[package]
+name = "blogpost_web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.6", features = ["multipart"] }
+tokio = { version = "1.41.0", features = ["full"] }
+serde_json = "1.0.132"
+sqlx = { version = "0.6.2", features = ["runtime-tokio-native-tls", "sqlite"] }
+tower-http = { version = "0.4", features = ["fs", "trace"] }
+base64 = "0.22.1"
+serde = { version = "1.0.214", features = ["derive"] }
+async-std = "1.13.0"
+image = "0.25.4"
+reqwest = { version="0.12.9",features = ["blocking"] }
+bytes = "1.8.0"
