@@ -1,7 +1,9 @@
-FROM rust:1.49
+FROM rust:1.82
 
-COPY ./ ./
+COPY . .
 
 RUN cargo build --release
 
-CMD ["./target/release/blogweb"]
+EXPOSE 8080
+
+CMD ["./target/release/blogpost_web"]
