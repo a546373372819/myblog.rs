@@ -18,5 +18,4 @@ Next, run the docker image:
 docker run -p 8080:8080 --rm --name myblog1 myblog
 ```
 Finally, you can access the blog website with the following link:
-[https://localhost:8080/home]
-(https://localhost:8080/home)
+https://localhost:8080/home
