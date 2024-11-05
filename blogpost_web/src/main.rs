@@ -1,3 +1,4 @@
+use std::fs;
 use std::sync::Arc;
 use axum::{response::IntoResponse, routing::get, Router};
 use axum::extract::DefaultBodyLimit;
@@ -22,6 +23,13 @@ const DB_URL: &str = "sqlite://database/app.db";
 
 #[tokio::main]
 async fn main() {
+
+    let avatar_path = "./static/uploads/avatar";
+    let blog_img_path="./static/uploads/blog";
+
+    fs::create_dir_all(avatar_path).unwrap();
+    fs::create_dir_all(blog_img_path).unwrap();
+
 
     let database=SqliteDatabase::new(DB_URL);
     database.init().await;

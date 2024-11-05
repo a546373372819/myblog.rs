@@ -46,7 +46,6 @@ document.getElementById("post_form").addEventListener("submit", async (e) => {
         avatar_img_src: avatar_img_src
     };
 
-    console.log(postData);
 
     formData.append('dto', JSON.stringify(postData)); // Add JSON as a string
 
@@ -67,6 +66,8 @@ document.getElementById("post_form").addEventListener("submit", async (e) => {
     .catch(error => {
         console.error('Error:', error);
     });
+
+
 
 
 });

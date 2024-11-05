@@ -15,6 +15,7 @@ impl PostService {
 
     pub async fn create_post(&self, post_dto: PostDTO, file: Option<bytes::Bytes>) {
 
+
         let avatar_img_num=SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
         let mut avatar_dest_path:Option<String>=None;
         match post_dto.avatar_img_src() {
@@ -31,6 +32,7 @@ impl PostService {
             None => {}
             Some(img) => {
                 blog_dest_path = Some(format!("{}{}{}", "uploads/blog/",blog_img_num.to_string(),".png"));
+                println!("{}",blog_dest_path.as_ref().unwrap());
                 Self::save_blog_png(img,blog_dest_path.as_ref().unwrap().as_str());
             }
         }
@@ -69,6 +71,7 @@ impl PostService {
         let img=reqwest::get(img_src).await.unwrap().bytes().await.unwrap();
         let res=image::load_from_memory_with_format(&img, image::ImageFormat::Png).unwrap();
         let ress=res.save(format!("{}{}","./static/",dest_path));
+        ress.unwrap();
 
     }
 
@@ -76,6 +79,7 @@ impl PostService {
 
         let res=image::load_from_memory_with_format(&file, image::ImageFormat::Png).unwrap();
         let ress=res.save(format!("{}{}","./static/",dest_path));
+        ress.unwrap();
 
     }
 

@@ -24,7 +24,7 @@ body{
     border-radius: 2px;
     max-height: 80%;
     min-width:300px;
-    width: 500px;
+    height: fit-content;
     max-width: 40%;
     aspect-ratio: 7/8;
     margin: 10px auto 10px auto;
@@ -97,12 +97,12 @@ body{
     text-align: center;
     color: #fffbef;
     width: 80%;
-    height: 40%;
     margin-left: auto;
     margin-right: auto;
     border: none;
-
     flex:1;
+
+
 }
 
 .blog_img{
@@ -111,7 +111,7 @@ body{
     margin-bottom: 10px;
     display: block;
     max-width: 90%;
-    max-height: 500px;
+    max-height: 30%;
 
 }
 
